@@ -21,8 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //quando o nome do objeto comeca com underline, indica que é private
-    final _calcBloc = CalcularCombustivelBloc(context);
+    final _calcBloc = CalcularIMCBloc(context);
 
     listaMenu = [
       {"Texto": "Calcular", "Clique": _calcBloc.calcular},
@@ -44,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                 width: 8,
               ),
               Text(
-                'Etanol x Gasolina',
+                'Adicone seu peso e a sua altura',
                 style: TextStyle(color: Colors.white),
               ),
             ],
@@ -65,15 +64,15 @@ class _HomePageState extends State<HomePage> {
         ),
         body: Column(
           children: [
-            CampoTexto(_calcBloc.gasolinaController, 'Gasolina', 'R\$'),
-            CampoTexto(_calcBloc.etanolController, 'Etanol', 'R\$'),
+            CampoTexto(_calcBloc.pesoController, 'Peso', ''),
+            CampoTexto(_calcBloc.alturaController, 'Altura', ''),
             ElevatedButton(
                 onPressed: () {
                   setState(() {
                     _calcBloc.calcular();
                   });
                 },
-                child: const Text('Calcular')),
+                child: const Text('Calcular IMC')),
             Text(_calcBloc.resultado, style: const TextStyle(fontSize: 32)),
           ],
         ),

@@ -12,7 +12,7 @@ class SobrePage extends StatelessWidget {
             backgroundColor: Colors.blueAccent.shade700),
         body: Column(
           children: [
-            const Text('Gasolina x Etanol'),
+            const Text('Orlando belin Neto x RA 12549 '),
           ],
         ),
       ),

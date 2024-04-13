@@ -32,7 +32,7 @@ class MenuLateral extends StatelessWidget {
     return DrawerHeader(
       child: Column(
         children: [
-          const Text('Gasolina x Etanol'),
+          const Text('Calculadora de IMC '),
         ],
       ),
     );
