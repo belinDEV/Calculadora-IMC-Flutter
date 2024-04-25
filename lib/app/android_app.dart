@@ -7,7 +7,7 @@ class AndroidApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Etanol x Gasolina',
+      title: 'Peso x Altura',
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
